@@ -36,8 +36,8 @@ public class SendedTab extends Tab {
 	
 	private Label listItemCaption = new Label("List item");
 	private String caption;
-	private final String incomingDocumentCaption = "IncomingDocument";
-	private final String incomingDocumentBackUpCaption = "IncomingDocument_Backup";
+	private final String incomingDocumentCaption = "OutcomingDocument";
+	private final String incomingDocumentBackUpCaption = "OutcomingDocument_Backup";
 	private EventHandler<DragEvent > dragListener = new EventHandler<DragEvent >() {
 
 		@Override
