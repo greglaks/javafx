@@ -259,8 +259,8 @@ public class SendedTab extends Tab {
 		bottomPane.setAlignment(Pos.CENTER_RIGHT);
 		
 		Hyperlink link = new Hyperlink("www.invio.cz");
-		Button b1 = new Button("Test");
-		Button b2 = new Button("Test");
+		Button b1 = new Button("Slozka Faktur");
+		Button b2 = new Button("Nastaveni");
 		
 		bottomPane.setSpacing(100);
 		

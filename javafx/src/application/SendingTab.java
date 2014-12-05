@@ -11,11 +11,13 @@ import java.util.Calendar;
 import org.apache.commons.io.FileUtils;
 
 import sun.font.CreatedFontTracker;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Control;
@@ -35,6 +37,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
 
 public class SendingTab extends Tab {
 
@@ -254,7 +257,6 @@ public class SendingTab extends Tab {
 		itemListWrapper.setSpacing(10);
 		itemListPane.getChildren().add(itemListWrapper);
 		
-		
 		HBox bottomPane = new HBox();
 		
 		bottomPane.getStyleClass().add("bottompane");
@@ -265,8 +267,8 @@ public class SendingTab extends Tab {
 		bottomPane.setAlignment(Pos.CENTER_RIGHT);
 		
 		Hyperlink link = new Hyperlink("www.invio.cz");
-		Button b1 = new Button("Test");
-		Button b2 = new Button("Test");
+		Button b1 = new Button("Slozka Faktur");
+		Button b2 = new Button("Nastaveni");
 		
 		bottomPane.setSpacing(100);
 		
@@ -278,6 +280,15 @@ public class SendingTab extends Tab {
 		bottomPane.getChildren().add(b2);
 		
 		pane.getChildren().add(bottomPane);
+		
+		b2.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				SettingWindow settingWindow = new SettingWindow();
+				settingWindow.show();
+			}
+		});
 		
 	}
 	

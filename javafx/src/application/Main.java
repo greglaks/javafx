@@ -41,8 +41,11 @@ public class Main extends Application {
 		try {
 			primaryStage.getIcons().add(Util.getOnlineImage());
 			AnchorPane anchorPane = new AnchorPane();
-			//primaryStage.setMinWidth(780);
+			primaryStage.setMinWidth(980);
 			primaryStage.setMinHeight(550);
+			primaryStage.setWidth(980);
+			primaryStage.setHeight(550);
+			primaryStage.setTitle("PRIPOJENO - Inovio365");
 			Scene scene = new Scene(anchorPane);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
